@@ -22,11 +22,11 @@ URL:      www.noaesthetic.com
    ====================
    <Variable name="keycolor" description="Main Color" type="color" default="#1a222a" value="#1a1a2a"/>
    <Variable name="body.background" description="Body Background" type="background"
-       color="$(body.background.color)" default="#111111 url(//themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa) repeat-x fixed top center" value="$(color) url(http://3.bp.blogspot.com/-x85DBIIgycE/V08GXKcVT8I/AAAAAAAAQls/McZkr4IDY58NwPGBrrr-r67ClMD1OWWRwCK4B/s0/DSC02894%2Bcopy.jpg) repeat fixed top left"/>
+       color="$(body.background.color)" default="#111111 url(//themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa) repeat-x fixed top center" value="$(color) url(http://4.bp.blogspot.com/-d7Jymzns72M/V3BKZSYUycI/AAAAAAAACeo/YI8al2ooVLITffkNdhU2OmiA7pmZ9am8ACK4B/s0/DSC02869.jpg) no-repeat fixed top left"/>
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
+         default="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 15px Georgia, Utopia, 'Palatino Linotype', Palatino, serif"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#333333" value="#333333"/>
    </Group>
 
@@ -44,13 +44,13 @@ URL:      www.noaesthetic.com
 
    <Group description="Blog Title" selector=".header h1">
      <Variable name="header.font" description="Title Font" type="font"
-         default="normal normal 36px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 36px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
+         default="normal normal 36px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 36px Georgia, Utopia, 'Palatino Linotype', Palatino, serif"/>
      <Variable name="header.text.color" description="Text Color" type="color" default="#ffffff"  value="#ffffff"/>
    </Group>
 
    <Group description="Tabs Text" selector=".tabs-inner .widget li a">
      <Variable name="tabs.font" description="Font" type="font"
-         default="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
+         default="normal normal 15px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 15px Georgia, Utopia, 'Palatino Linotype', Palatino, serif"/>
      <Variable name="tabs.text.color" description="Text Color" type="color" default="#ffffff" value="#ffffff"/>
      <Variable name="tabs.selected.text.color" description="Selected Color" type="color" default="$(link.color)" value="#336699"/>
    </Group>
@@ -63,7 +63,7 @@ URL:      www.noaesthetic.com
 
    <Group description="Post Title" selector="h3.post-title, .comments h4">
      <Variable name="post.title.font" description="Title Font" type="font"
-         default="normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
+         default="normal normal 18px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 18px Georgia, Utopia, 'Palatino Linotype', Palatino, serif"/>
    </Group>
 
    <Group description="Date Header" selector=".date-header">
@@ -71,14 +71,14 @@ URL:      www.noaesthetic.com
    </Group>
 
    <Group description="Post" selector=".post">
-     <Variable name="post.footer.text.color" description="Footer Text Color" type="color" default="#999999" value="#999999"/>
+     <Variable name="post.footer.text.color" description="Footer Text Color" type="color" default="#999999" value="#444444"/>
      <Variable name="post.border.color" description="Border Color" type="color" default="#dddddd" value="#dddddd"/>
    </Group>
 
    <Group description="Gadgets" selector="h2">
      <Variable name="widget.title.font" description="Title Font" type="font"
-        default="bold normal 13px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="bold normal 13px Arial, Tahoma, Helvetica, FreeSans, sans-serif"/>
-     <Variable name="widget.title.text.color" description="Title Color" type="color" default="#888888" value="#888888"/>
+        default="bold normal 13px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 100% Georgia, Utopia, 'Palatino Linotype', Palatino, serif"/>
+     <Variable name="widget.title.text.color" description="Title Color" type="color" default="#888888" value="#444444"/>
    </Group>
 
    <Group description="Footer" selector=".footer-outer">
@@ -136,7 +136,7 @@ URL:      www.noaesthetic.com
    <Variable name="widget.title.text.transform" description="Widget Title Text Transform" type="string" default="uppercase" value="uppercase"/>
 
    <Variable name="mobile.background.overlay" description="Mobile Background Overlay" type="string"
-       default="transparent none repeat scroll top left" value="transparent none repeat scroll top left"/>
+       default="transparent none repeat fixed top left" value="transparent none repeat fixed top left"/>
 
    <Variable name="startSide" description="Side where text starts in blog language" type="automatic" default="left" value="left"/>
    <Variable name="endSide" description="Side where text ends in blog language" type="automatic" default="right" value="right"/>
@@ -152,8 +152,10 @@ body {
 
 html body .region-inner {
   min-width: 0;
-  max-width: 100%;
   width: auto;
+  margin-top:15px;
+
+  
 }
 
 .content-outer {
@@ -198,6 +200,7 @@ a:hover {
 /* Header
 ----------------------------------------------- */
 .header-outer {
+  align:center;
   background: $(header.background.color) $(header.background.gradient) repeat-x scroll top left;
   _background-image: none;
 
@@ -338,6 +341,7 @@ h2 {
 
 .main-inner {
   padding: 15px $(main.padding.sides) 20px;
+
 }
 
 .main-inner .column-center-inner {
@@ -504,10 +508,13 @@ h3.post-title {
   color: $(footer.widget.title.text.color);
 }
 
+
 /* Mobile
 ----------------------------------------------- */
 html body.mobile {
   height: auto;
+  background: url(https://3.bp.blogspot.com/-MNB-hmpcZq0/V3FUSzDYJ9I/AAAAAAAACfw/66jYlzO8GQYldvL9a0B37Zp4hiz89Tg0gCKgB/s1600/P5280082.jpg) no-repeat fixed;
+
 }
 
 html body.mobile {
@@ -517,6 +524,7 @@ html body.mobile {
 
 .mobile .body-fauxcolumn-outer {
   background: $(mobile.background.overlay);
+  
 }
 
 html .mobile .mobile-date-outer, html .mobile .blog-pager {
@@ -527,6 +535,8 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 
 .mobile .date-outer {
   background: $(main.background);
+  border-radius: 5px;
+  
 }
 
 .mobile .header-outer, .mobile .main-outer,
@@ -542,12 +552,20 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 .mobile .post-outer {
   background: inherit;
   border: none;
+
 }
 
 .mobile .content-outer {
   font-size: 100%;
 }
+.mobile .region-inner {
+margin-left:20px;
+min-width:100%;
 
+}
+.mobile-index-title{
+    width:auto;
+}
 .mobile-link-button {
   background-color: $(link.color);
 }
@@ -568,6 +586,7 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 .mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
   border-$startSide: 1px solid $(tabs.separator.color);
 }
+
 .content-outer {border-radius: 5px;}
 .post-outer {border-radius: 5px;}
 .post-body, .entry-content {padding: 10px; }
@@ -597,18 +616,23 @@ html .mobile .mobile-date-outer, html .mobile .blog-pager {
 
     <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1080px'/>
-      <b:variable default='0' name='main.column.left.width' type='length' value='200px'/>
+      <b:variable default='0' name='main.column.left.width' type='length' value='260px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='0px'/>
 
       <![CDATA[
       body {
+        
         min-width: $(content.width);
+		
       }
 
-      .content-outer, .content-fauxcolumn-outer, .region-inner {
-        min-width: $(content.width);
-        max-width: $(content.width);
-        _width: $(content.width);
+      .content-outer, .content-fauxcolumn-outer{
+        min-width: 0%;
+        max-width: 75%;
+      }
+      .region-inner {
+        min-width: 0%;
+        max-width: 100%;
       }
 
       .main-inner .columns {
@@ -687,6 +711,7 @@ div.innerHTML = summary;
 }
 //]]>
 </script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/nivo-slider.min.css' media='all' rel='stylesheet' type='text/css'/>
 </head>
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
@@ -708,7 +733,7 @@ div.innerHTML = summary;
       gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
         if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
           gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d8483532457778399113\x26blogName\x3dCarpe+Mons\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttp://www.carpemons.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttp://www.carpemons.com/\x26vt\x3d4955508222468524965&#39;,
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d8483532457778399113\x26blogName\x3dCarpe+Mons\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttp://www.carpemons.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttp://www.carpemons.com/\x26vt\x3d4955508222468524965&#39;,
               where: document.getElementById(&quot;navbar-iframe-container&quot;),
               id: &quot;navbar-iframe&quot;
           });
@@ -880,7 +905,29 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'/>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' showaddelement='yes'>
+        <b:widget id='HTML1' locked='false' title='' type='HTML' version='1' visible='true'>
+          <b:includable id='main'>
+<b:if cond='data:blog.canonicalUrl == data:blog.homepageUrl'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+<b:else/>
+
+<style type='text/css'>
+#Text1 {display:none;}/*remove blank space that the gadget leaves*/
+</style>
+
+</b:if>
+</b:includable>
+        </b:widget>
+      </b:section>
       <b:section class='tabs' id='crosscol-overflow' showaddelement='no'/>
     </div>
     </div>
